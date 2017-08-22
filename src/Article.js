@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import CommentsList from './CommentsList'
 
 class Article extends Component {
     constructor(props) {
@@ -16,6 +17,7 @@ class Article extends Component {
             <div>
                 <h3 onClick = {this.handleClick}>{article.title}</h3>
                 {this.getBody()}
+                <CommentsList comments={article.comments} />
             </div>
         )
     }
